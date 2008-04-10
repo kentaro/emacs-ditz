@@ -25,8 +25,8 @@ emacs-ditz provides ditz.el, Emacs interface to Ditz issue tracking system. You 
   (setq ditz-program "/path/to/ditz")
 
   ;; If you don't want to always set issue dir when you run commands,
-  ;; ditz.el provides automatic finding functionality. Add the settigs
-  ;; below:
+  ;; ditz.el provides automatic finding functionality. Add the
+  ;; settings below:
 
   ;; Issue directory name (default: "bugs")
   (setq ditz-issue-directory "issues")

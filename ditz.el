@@ -20,7 +20,8 @@
 
 ;;; Commentary:
 
-;; See README file for usage.
+;; See README file or the website below:
+;; http://github.com/kentaro/emacs-ditz/tree/master
 
 ;;; Code:
 
