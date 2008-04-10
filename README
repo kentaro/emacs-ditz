@@ -3,7 +3,8 @@ README for emacs-ditz
 
 * Description
 
-emacs-ditz provides ditz.el, Emacs interface to Ditz issue tracking system. You can get Ditz from http://ditz.rubyforge.org/.
+emacs-ditz provides ditz.el, Emacs interface to Ditz issue tracking
+system. You can get Ditz from http://ditz.rubyforge.org/.
 
 * Usage
 
