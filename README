@@ -1,0 +1,72 @@
+README for emacs-ditz
+=====================
+
+* Description
+
+emacs-ditz provides ditz.el, Emacs interface to Ditz issue tracking system. You can get Ditz from http://ditz.rubyforge.org/.
+
+* Usage
+
+(1) Checkout from repository.
+
+  $ git clone git://github.com/kentaro/emacs-ditz.git
+
+(2) Add the checkout directory into your load-path.
+
+  (add-to-list 'load-path "/path/to/emacs-ditz")
+  
+(3) Load dzit.el.
+
+  (require 'ditz)
+
+(4) Set some variables as you like.
+
+  ;; Path to the ditz command (default: "ditz")
+  (setq ditz-program "/path/to/ditz")
+
+  ;; If you don't want to always set issue dir when you run commands,
+  ;; ditz.el provides automatic finding functionality. Add the settigs
+  ;; below:
+
+  ;; Issue directory name (default: "bugs")
+  (setq ditz-issue-directory "issues")
+
+  ;; Enable automatic finding functionality.
+  (setq ditz-find-issue-directory-automatically-flag t))
+
+(5) Run M-x ditz-init to initialize your ditz issues.
+
+(6) Run M-x ditz-add-release to add a new release.
+
+(7) Run M-x ditz-add to add a new issue
+
+(8) M-x ditz-status, ditz-todo, ditz-todo, ditz-log are useful for
+  browsing your issues.
+
+(9) To change issues/releases' status:
+
+  [1] Run M-x ditz-todo to list issues up.
+  [2] Enter the keys below on underlined strings:
+
+    - "s": ditz-show         (Show issue's detail)
+    - "a": ditz-assign       (Assign/reassign issue to a release)
+    - "c": ditz-close        (Close issue)
+    - "r": ditz-release      (Mark release as done)
+    - "g": ditz-reload       (Reload status/todo/log buffer)
+    - "q": ditz-close-buffer (Close ditz-mode buffer)
+
+(10) For the usage of Ditz itself, see the document below:
+
+  http://ditz.rubyforge.org/README.txt
+
+* CAVEAT
+
+- ditz-edit now doesn't work because `ditz edit issue-id' doesn't
+  work on Emacs.
+
+* AUTHOR
+
+Kentaro Kuribayashi
+
+kentarok@gmail.com
+http://kentarok.org/

@@ -1,0 +1,16 @@
+--- !ditz.rubyforge.org,2008-03-06/project 
+name: emacs-ditz
+version: "0.2"
+components: 
+- !ditz.rubyforge.org,2008-03-06/component 
+  name: emacs-ditz
+releases: 
+- !ditz.rubyforge.org,2008-03-06/release 
+  name: "0.1"
+  status: :unreleased
+  release_time: 
+  log_events: 
+  - - 2008-04-10 20:26:45.696563 Z
+    - Kentaro Kuribayashi <kentarok@gmail.com>
+    - created
+    - Initial release

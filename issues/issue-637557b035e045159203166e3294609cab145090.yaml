@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: write README
+desc: ""
+type: :feature
+component: emacs-ditz
+release: "0.1"
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-04-10 20:27:30.804725 Z
+references: []
+
+id: 637557b035e045159203166e3294609cab145090
+log_events: 
+- - 2008-04-10 20:27:32.127151 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""

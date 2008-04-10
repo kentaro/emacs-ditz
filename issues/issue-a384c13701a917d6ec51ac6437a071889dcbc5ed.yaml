@@ -1,0 +1,18 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: create ditz.el
+desc: ""
+type: :feature
+component: emacs-ditz
+release: "0.1"
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :unstarted
+disposition: 
+creation_time: 2008-04-10 20:27:09.230301 Z
+references: []
+
+id: a384c13701a917d6ec51ac6437a071889dcbc5ed
+log_events: 
+- - 2008-04-10 20:27:10.246518 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""
