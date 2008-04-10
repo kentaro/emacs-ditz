@@ -59,6 +59,11 @@ must set it from minibuffer."
   (interactive)
   (ditz-call-process "init" nil "pop"))
 
+(defun ditz-html ()
+  "Generate html files of issues."
+  (interactive)
+  (ditz-call-process "html" nil "display"))
+
 (defun ditz-add-release ()
   "Add a new release."
   (interactive)
@@ -184,6 +189,8 @@ must set it from minibuffer."
            (pop-to-buffer buffer))
           ((string= popup-flag "switch")
            (switch-to-buffer buffer))
+          ((string= popup-flag "display")
+             (display-buffer buffer))
           (t
            (set-buffer buffer)))
 

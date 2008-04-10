@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: support `ditz html' command
+desc: ""
+type: :feature
+component: emacs-ditz
+release: "0.2"
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-04-10 22:39:25.283112 Z
+references: []
+
+id: 1bc5db0f7686559ee9635721bc2a50e8e4a4ecbc
+log_events: 
+- - 2008-04-10 22:39:26.396102 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-04-10 22:47:17.597926 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - closed issue with disposition fixed
+  - ""
