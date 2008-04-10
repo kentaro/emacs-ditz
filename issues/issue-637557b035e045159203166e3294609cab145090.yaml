@@ -5,8 +5,8 @@ type: :feature
 component: emacs-ditz
 release: "0.1"
 reporter: Kentaro Kuribayashi <kentarok@gmail.com>
-status: :unstarted
-disposition: 
+status: :closed
+disposition: :fixed
 creation_time: 2008-04-10 20:27:30.804725 Z
 references: []
 
@@ -15,4 +15,8 @@ log_events:
 - - 2008-04-10 20:27:32.127151 Z
   - Kentaro Kuribayashi <kentarok@gmail.com>
   - created
+  - ""
+- - 2008-04-10 20:32:52.751014 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - closed issue with disposition fixed
   - ""
