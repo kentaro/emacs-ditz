@@ -77,17 +77,17 @@ must set it from minibuffer."
 (defun ditz-status ()
   "Show status of issues."
   (interactive)
-  (ditz-call-process "status" nil "pop"))
+  (ditz-call-process "status" nil "display"))
 
 (defun ditz-todo ()
   "Show current todo."
   (interactive)
-  (ditz-call-process "todo" nil "pop"))
+  (ditz-call-process "todo" nil "display"))
 
 (defun ditz-log ()
   "Show log of recent activities."
   (interactive)
-  (ditz-call-process "log" nil "pop"))
+  (ditz-call-process "log" nil "display"))
 
 (defun ditz-show ()
   "Show issue detale."

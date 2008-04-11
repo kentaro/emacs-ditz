@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Better window handling (popup/display/switch)
+desc: ""
+type: :feature
+component: emacs-ditz
+release: 
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-04-11 07:21:24.146292 Z
+references: []
+
+id: 057224193897df09b58ae3181fa876abb00934f0
+log_events: 
+- - 2008-04-11 07:21:25.065960 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-04-11 07:24:03.309065 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - closed issue with disposition fixed
+  - now ditz-todo/log/status run display-window not pop-to-window.

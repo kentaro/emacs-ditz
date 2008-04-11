@@ -56,9 +56,9 @@ system. You can get Ditz from http://ditz.rubyforge.org/.
     - "g": ditz-reload       (Reload status/todo/log buffer)
     - "q": ditz-close-buffer (Close ditz-mode buffer)
 
-(11) M-x ditz-html generates HTML files including all statuses.
+(10) M-x ditz-html generates HTML files including all statuses.
 
-(10) For the usage of Ditz itself, see the document below:
+(11) For the usage of Ditz itself, see the document below:
 
   http://ditz.rubyforge.org/README.txt
 
