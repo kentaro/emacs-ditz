@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-<title>Better window handling (popup/display/switch)</title>
+<title>goto-char properly should run after ditz-log/status/todo.</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -9,24 +9,24 @@
 
 <a href="index.html">&laquo; emacs-ditz project page</a>
 
-<h1>Better window handling (popup/display/switch)</h1>
+<h1>goto-char properly should run after ditz-log/status/todo.</h1>
 
-<p></p>
+<p>If the result these commands give is too long, the newest line goes away above the screen. (goto-char (point-min)) should work well.</p>
 
 <table>
   <tr>
     <td class="attrname">Id:</td>
-    <td class="attrval">057224193897df09b58ae3181fa876abb00934f0</td>
+    <td class="attrval">7ccde534d53c6ebb34006a54dcd0acf78252de1f</td>
   </tr>
 
   <tr>
     <td class="attrname">Type:</td>
-    <td class="attrval">feature</td>
+    <td class="attrval">bugfix</td>
   </tr>
 
   <tr>
     <td class="attrname">Creation time:</td>
-    <td class="attrval">Fri Apr 11 07:21:24 UTC 2008</td>
+    <td class="attrval">Fri Apr 11 10:08:44 UTC 2008</td>
   </tr>
 
   <tr>
@@ -68,7 +68,7 @@
 
   <tr class="logentryeven">
 
-  <td class="logtime">Fri Apr 11 07:21:25 UTC 2008</td>
+  <td class="logtime">Fri Apr 11 10:08:45 UTC 2008</td>
   <td class="logwho">Kentaro Kuribayashi &lt;kentarok@...&gt;</td>
   <td class="logwhat">created</td>
   </tr>
@@ -80,13 +80,13 @@
 
   <tr class="logentryodd">
 
-  <td class="logtime">Fri Apr 11 07:24:03 UTC 2008</td>
+  <td class="logtime">Fri Apr 11 10:30:53 UTC 2008</td>
   <td class="logwho">Kentaro Kuribayashi &lt;kentarok@...&gt;</td>
   <td class="logwhat">closed issue with disposition fixed</td>
   </tr>
   <tr><td colspan="3" class="logcomment">
     
-      <p>now ditz-todo/log/status run display-window not pop-to-window.</p>
+      <p>Reverted ditz-todo/log to popup window.</p>
     
   </td></tr>
 

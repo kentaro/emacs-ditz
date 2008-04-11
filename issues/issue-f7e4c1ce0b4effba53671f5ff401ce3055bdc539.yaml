@@ -1,0 +1,26 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: ditz-add/add-release should run using switch-to-buffer in ditz-mode window.
+desc: Works fine?
+type: :feature
+component: emacs-ditz
+release: "0.3"
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-04-11 10:10:46.829914 Z
+references: []
+
+id: f7e4c1ce0b4effba53671f5ff401ce3055bdc539
+log_events: 
+- - 2008-04-11 10:10:48.034666 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-04-11 10:32:18.344274 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - closed issue with disposition fixed
+  - Those commands now check if being in ditz-mode buffer or other.
+- - 2008-04-11 10:49:11.650288 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - changed description
+  - Good!

@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: goto-char properly should run after ditz-log/status/todo.
+desc: If the result these commands give is too long, the newest line goes away above the screen. (goto-char (point-min)) should work well.
+type: :bugfix
+component: emacs-ditz
+release: "0.3"
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-04-11 10:08:44.415108 Z
+references: []
+
+id: 7ccde534d53c6ebb34006a54dcd0acf78252de1f
+log_events: 
+- - 2008-04-11 10:08:45.743640 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-04-11 10:30:53.727179 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - closed issue with disposition fixed
+  - Reverted ditz-todo/log to popup window.

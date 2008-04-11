@@ -82,12 +82,12 @@ must set it from minibuffer."
 (defun ditz-todo ()
   "Show current todo."
   (interactive)
-  (ditz-call-process "todo" nil "display"))
+  (ditz-call-process "todo" nil "pop"))
 
 (defun ditz-log ()
   "Show log of recent activities."
   (interactive)
-  (ditz-call-process "log" nil "display"))
+  (ditz-call-process "log" nil "pop"))
 
 (defun ditz-show ()
   "Show issue detale."
@@ -185,12 +185,13 @@ must set it from minibuffer."
     (when current-directory
       (setq default-directory current-directory))
 
-    (cond ((string= popup-flag "pop")
-           (pop-to-buffer buffer))
-          ((string= popup-flag "switch")
+    (cond ((or (eq major-mode 'ditz-mode)
+               (string= popup-flag "switch"))
            (switch-to-buffer buffer))
+          ((string= popup-flag "pop")
+           (pop-to-buffer buffer))
           ((string= popup-flag "display")
-             (display-buffer buffer))
+           (display-buffer buffer))
           (t
            (set-buffer buffer)))
 
@@ -236,13 +237,14 @@ must set it from minibuffer."
 (defvar ditz-mode-map (make-keymap)
   "*Keymap for Ditz major mode")
 
-(define-key ditz-mode-map "s" 'ditz-show)
-(define-key ditz-mode-map "a" 'ditz-assign)
-(define-key ditz-mode-map "e" 'ditz-edit)
-(define-key ditz-mode-map "c" 'ditz-close)
-(define-key ditz-mode-map "r" 'ditz-release)
-(define-key ditz-mode-map "g" 'ditz-reload)
-(define-key ditz-mode-map "q" 'ditz-close-buffer)
+(define-key ditz-mode-map "s"    'ditz-show)
+(define-key ditz-mode-map "\C-m" 'ditz-show)
+(define-key ditz-mode-map "a"    'ditz-assign)
+(define-key ditz-mode-map "e"    'ditz-edit)
+(define-key ditz-mode-map "c"    'ditz-close)
+(define-key ditz-mode-map "r"    'ditz-release)
+(define-key ditz-mode-map "g"    'ditz-reload)
+(define-key ditz-mode-map "q"    'ditz-close-buffer)
 
 ;; Face
 (defface ditz-issue-id-face

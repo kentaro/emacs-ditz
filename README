@@ -50,6 +50,7 @@ system. You can get Ditz from http://ditz.rubyforge.org/.
   [2] Enter the keys below on underlined strings:
 
     - "s": ditz-show         (Show issue's detail)
+    - "e": ditz-edit         (Edit issue's detail)
     - "a": ditz-assign       (Assign/reassign issue to a release)
     - "c": ditz-close        (Close issue)
     - "r": ditz-release      (Mark release as done)
