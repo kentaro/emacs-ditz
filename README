@@ -32,8 +32,8 @@ system. You can get Ditz from http://ditz.rubyforge.org/.
   ;; Issue directory name (default: "bugs")
   (setq ditz-issue-directory "issues")
 
-  ;; Enable automatic finding functionality.
-  (setq ditz-find-issue-directory-automatically-flag t))
+  ;; Enable automatic finding functionality (default: nil)
+  (setq ditz-find-issue-directory-automatically-flag t)
 
 (5) Run M-x ditz-init to initialize your ditz issues.
 

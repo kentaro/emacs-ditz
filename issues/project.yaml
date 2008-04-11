@@ -44,3 +44,16 @@ releases:
     - Kentaro Kuribayashi <kentarok@gmail.com>
     - released
     - release 0.3
+- !ditz.rubyforge.org,2008-03-06/release 
+  name: "0.4"
+  status: :released
+  release_time: 2008-04-11 13:18:54.902624 Z
+  log_events: 
+  - - 2008-04-11 12:12:15.794477 Z
+    - Kentaro Kuribayashi <kentarok@gmail.com>
+    - created
+    - ""
+  - - 2008-04-11 13:18:54.902658 Z
+    - Kentaro Kuribayashi <kentarok@gmail.com>
+    - released
+    - release 0.4

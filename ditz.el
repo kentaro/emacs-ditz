@@ -159,13 +159,7 @@ must set it from minibuffer."
 (defun ditz-call-process (command &optional arg popup-flag)
   "Call ditz process asynchronously according with sub-commands."
   (let* ((buffer (get-buffer-create (concat "*ditz-" command "*")))
-         (proc (get-buffer-process buffer))
-         (current-directory))
-
-    ;; Reserve current directory to come back later It's needed when
-    ;; automatically finding directory.
-    (when buffer-file-name
-      (setq current-directory (file-name-directory (buffer-file-name))))
+         (proc (get-buffer-process buffer)))
 
     (if (and proc (eq (process-status proc) 'run))
         (when (y-or-n-p (format "A %s process is running; kill it?"
@@ -181,9 +175,6 @@ must set it from minibuffer."
     (make-comint-in-buffer "ditz-call-process"
                            buffer shell-file-name nil shell-command-switch
                            (ditz-build-command command arg))
-
-    (when current-directory
-      (setq default-directory current-directory))
 
     (cond ((or (eq major-mode 'ditz-mode)
                (string= popup-flag "switch"))
@@ -204,30 +195,42 @@ must set it from minibuffer."
             (goto-char (point-min)))))))))
 
 (defvar ditz-last-visited-issue-directory nil)
+
 (defun ditz-build-command (command arg)
-  (let (issue-directory)
+  (let (issue-directory current-directory)
+
+    ;; Reserve current directory to come back later It's needed when
+    ;; automatically finding directory.
+    (when buffer-file-name
+      (setq current-directory (file-name-directory (buffer-file-name))))
+
     (cond ((eq major-mode 'ditz-mode)
            (setq issue-directory ditz-last-visited-issue-directory))
           ((and (not (string= command "init"))
-                ditz-find-issue-directory-automatically-flag)
-           (catch 'loop
-             (while t
-               (cond ((file-exists-p ditz-issue-directory)
-                      (setq issue-directory
-                            (concat default-directory ditz-issue-directory))
-                      (throw 'loop t))
-                     ((string= "/" default-directory)
-                      (throw 'loop nil))
-                     (t
-                      (cd ".."))))))
+                ditz-find-issue-directory-automatically-flag
+                (catch 'loop
+                  (while t
+                    (cond ((file-exists-p ditz-issue-directory)
+                           (throw 'loop t))
+                          ((string= "/" default-directory)
+                           (throw 'loop nil))
+                          (t
+                           (cd ".."))))))
+           (setq issue-directory
+                            (concat default-directory ditz-issue-directory)))
           (t
            (setq issue-directory
                  (read-file-name "Issue dir: "
                                  (or ditz-last-visited-issue-directory
                                      default-directory)))))
 
+    ;; Restore default directory if needed.
+    (when current-directory
+      (setq default-directory current-directory))
+
     (setq ditz-last-visited-issue-directory issue-directory)
-    (mapconcat 'identity (list ditz-program command arg "-i" issue-directory) " ")))
+    (mapconcat 'identity
+               (list ditz-program command arg "-i" issue-directory) " ")))
 
 ;; Hooks
 (defvar ditz-mode-hook nil

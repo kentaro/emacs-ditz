@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Show prompt to set issue dir after failing to find dir in auto-finding mode.
+desc: ""
+type: :bugfix
+component: emacs-ditz
+release: "0.4"
+reporter: Kentaro Kuribayashi <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-04-11 13:02:26.380822 Z
+references: []
+
+id: 89b4dd9e965eeceef261869d99a6a0f138668e3d
+log_events: 
+- - 2008-04-11 13:02:27.630145 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-04-11 13:18:41.958849 Z
+  - Kentaro Kuribayashi <kentarok@gmail.com>
+  - closed issue with disposition fixed
+  - ""
