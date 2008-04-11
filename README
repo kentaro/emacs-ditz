@@ -63,12 +63,7 @@ system. You can get Ditz from http://ditz.rubyforge.org/.
 
   http://ditz.rubyforge.org/README.txt
 
-* CAVEAT
-
-- ditz-edit now doesn't work because `ditz edit issue-id' doesn't
-  work on Emacs.
-
-* AUTHOR
+* Author
 
 Kentaro Kuribayashi
 
