@@ -1,6 +1,6 @@
 ;;; ditz.el --- Emacs interface to Ditz issue tracking system 
 
-;; Copyright (C) 2008  
+;; Copyright (C) 2008 Kentaro Kuribayashi
 
 ;; Author: Kentaro Kuribayashi <kentarok@gmail.com>
 ;; Keywords: ditz, todo
