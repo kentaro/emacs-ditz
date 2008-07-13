@@ -126,6 +126,16 @@ must set it from minibuffer."
         (ditz-call-process "close" issue-id "switch")
       (error "Issue id not found"))))
 
+(defun ditz-drop ()
+  "Drop an issue."
+  (interactive)
+  (let ((issue-id nil))
+    (setq issue-id (ditz-extract-thing-at-point ditz-issue-id-regex 1))
+    (if issue-id
+        (when (yes-or-no-p (concat "Drop " issue-id " "))
+          (ditz-call-process "drop" issue-id "switch"))
+      (error "Issue id not found"))))
+
 (defun ditz-release ()
   "Mark issues as released."
   (interactive)
@@ -242,7 +252,9 @@ must set it from minibuffer."
 
 (define-key ditz-mode-map "s"    'ditz-show)
 (define-key ditz-mode-map "\C-m" 'ditz-show)
+(define-key ditz-mode-map "A"    'ditz-add)
 (define-key ditz-mode-map "a"    'ditz-assign)
+(define-key ditz-mode-map "D"    'ditz-drop)
 (define-key ditz-mode-map "e"    'ditz-edit)
 (define-key ditz-mode-map "c"    'ditz-close)
 (define-key ditz-mode-map "r"    'ditz-release)
