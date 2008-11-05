@@ -41,14 +41,16 @@ system. You can get Ditz from http://ditz.rubyforge.org/.
 
 (7) Run M-x ditz-add to add a new issue
 
-(8) M-x ditz-status, ditz-todo, ditz-todo, ditz-log are useful for
-  browsing your issues.
+(8) M-x ditz-status, ditz-todo, ditz-log are useful for browsing your
+  issues.
 
 (9) To change issues/releases' status:
 
   [1] Run M-x ditz-todo to list issues up.
   [2] Enter the keys below on underlined strings:
 
+    - "A": ditz-add          (Add issue)
+    - "D": ditz-drop         (Drop issue)
     - "s": ditz-show         (Show issue's detail)
     - "e": ditz-edit         (Edit issue's detail)
     - "a": ditz-assign       (Assign/reassign issue to a release)

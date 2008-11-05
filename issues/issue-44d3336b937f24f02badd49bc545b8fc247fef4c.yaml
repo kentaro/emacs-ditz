@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Adopt a patch from id:t-wada
+desc: ""
+type: :bugfix
+component: emacs-ditz
+release: "0.5"
+reporter: antipop <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-11-05 03:52:10.813093 Z
+references: []
+
+id: 44d3336b937f24f02badd49bc545b8fc247fef4c
+log_events: 
+- - 2008-11-05 03:52:12.109692 Z
+  - antipop <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-11-05 03:55:15.774360 Z
+  - antipop <kentarok@gmail.com>
+  - closed with disposition fixed
+  - ""

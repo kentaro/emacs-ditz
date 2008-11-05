@@ -50,7 +50,7 @@ must set it from minibuffer."
 (defconst ditz-issue-id-regex "^[_ ]+\\([^:\n]+\\):.*$"
   "Regex for issue id.")
 
-(defconst ditz-release-name-regex "^Version *\\([^\n ]+\\) *.*$"
+(defconst ditz-release-name-regex "^\\(Version \\)?\\([^\n ]+\\) *.*$"
   "Regex for issue id.")
 
 ;; Commands
@@ -107,7 +107,6 @@ must set it from minibuffer."
         (ditz-call-process "assign" issue-id "switch")
       (error "Issue id not found"))))
 
-;; Doesn't work now
 (defun ditz-edit ()
   "Edit issue detale."
   (interactive)
@@ -140,7 +139,7 @@ must set it from minibuffer."
   "Mark issues as released."
   (interactive)
   (let ((release-name nil))
-    (setq release-name (ditz-extract-thing-at-point ditz-release-name-regex 1))
+    (setq release-name (ditz-extract-thing-at-point ditz-release-name-regex 2))
     (if release-name
         (ditz-call-process "release" release-name "switch")
       (error "Release name not found"))))
@@ -240,7 +239,7 @@ must set it from minibuffer."
 
     (setq ditz-last-visited-issue-directory issue-directory)
     (mapconcat 'identity
-               (list ditz-program command arg "-i" issue-directory) " ")))
+               (list ditz-program "-i" issue-directory command arg) " ")))
 
 ;; Hooks
 (defvar ditz-mode-hook nil

@@ -1,0 +1,22 @@
+--- !ditz.rubyforge.org,2008-03-06/issue 
+title: Accept a pull-request from rmm5t
+desc: http://github.com/rmm5t/emacs-ditz/tree/master
+type: :task
+component: emacs-ditz
+release: "0.5"
+reporter: antipop <kentarok@gmail.com>
+status: :closed
+disposition: :fixed
+creation_time: 2008-11-05 03:49:42.636901 Z
+references: []
+
+id: c1ed5faefc9c88745216729528aa3ef780d43de9
+log_events: 
+- - 2008-11-05 03:49:44.044476 Z
+  - antipop <kentarok@gmail.com>
+  - created
+  - ""
+- - 2008-11-05 03:51:39.093231 Z
+  - antipop <kentarok@gmail.com>
+  - closed with disposition fixed
+  - ""
